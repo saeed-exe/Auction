@@ -1,0 +1,15 @@
+/* Global styles */
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  header {
+    background-color: #2148c0;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  /* Add any other global styles you need */
+  

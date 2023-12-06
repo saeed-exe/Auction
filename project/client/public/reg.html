@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="main-container">
+        <div class="image-wrapper">
+            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/eb682d4b-ca24-4e20-a3b1-f38da5d6a596?apiKey=94a6449fd86a4acd9dd45ac2c2bf0dcf&" class="img" alt="Background Image">
+            <div class="description">
+                <div class="input-container">
+                    <div class="input-wrapper">
+                        <input type="email" placeholder="Email" id="email" required>
+                    </div>
+                    <div class="input-wrapper">
+                        <input type="text" placeholder="Address" id="address" required>
+                    </div>
+                    <div class="input-wrapper">
+                        <input type="text" placeholder="State" id="state" required>
+                    </div>
+                    <div class="input-wrapper">
+                        <input type="text" placeholder="City" id="city" required>
+                    </div>
+                    <div class="input-wrapper">
+                        <input type="text" placeholder="Pincode" id="pincode" required>
+                    </div>
+                    <div class="input-wrapper">
+                        <input type="tel" placeholder="Phone Number" id="phoneNumber" required>
+                    </div>
+                    <div class="input-wrapper">
+                        <input type="text" placeholder="Aadhar Number" id="aadharNumber" required>
+                    </div>
+                    <div class="input-wrapper">
+                        <input type="password" placeholder="Password" id="password" required>
+                    </div>
+                </div>
+                <button class="register-btn" onclick="validateForm()">Register</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function validateForm() {
+            var email = document.getElementById('email').value;
+            var address = document.getElementById('address').value;
+            var state = document.getElementById('state').value;
+            var city = document.getElementById('city').value;
+            var pincode = document.getElementById('pincode').value;
+            var phoneNumber = document.getElementById('phoneNumber').value;
+            var aadharNumber = document.getElementById('aadharNumber').value;
+            var password = document.getElementById('password').value;
+
+            // Email validation
+            var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                alert('Invalid email address');
+                return false;
+            }
+
+            // Address validation
+            if (address.trim() === "") {
+                alert('Address cannot be empty');
+                return false;
+            }
+
+            // State validation
+            if (state.trim() === "") {
+                alert('State cannot be empty');
+                return false;
+            }
+
+            // City validation
+            if (city.trim() === "") {
+                alert('City cannot be empty');
+                return false;
+            }
+
+            // Pincode validation
+            var pincodeRegex = /^\d{6}$/;
+            if (!pincodeRegex.test(pincode)) {
+                alert('Invalid pincode');
+                return false;
+            }
+
+            // Phone number validation
+            var phoneNumberRegex = /^\d{10}$/;
+            if (!phoneNumberRegex.test(phoneNumber)) {
+                alert('Invalid phone number');
+                return false;
+            }
+
+            // Aadhar number validation
+            var aadharNumberRegex = /^\d{12}$/;
+            if (!aadharNumberRegex.test(aadharNumber)) {
+                alert('Invalid Aadhar number');
+                return false;
+            }
+
+            // Password validation
+            var passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,15}$/;
+            if (!passwordRegex.test(password)) {
+                alert('Invalid password. It must be 8-15 characters, contain at least one uppercase letter, one lowercase letter, one number, and one special character.');
+                return false;
+            }
+
+            // If all fields are valid, you can proceed with further actions
+            alert('Registration successful!');
+            // Add any further actions you want to perform after successful validation
+        }
+    </script>
+</body>
+
+</html>

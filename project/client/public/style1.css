@@ -1,0 +1,93 @@
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.main-container {
+    background-color: #2148c0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.image-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    align-items: center;
+    padding: 50px 20px;
+    min-height: 100%;
+    box-sizing: border-box;
+}
+
+.img {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: -1;
+}
+
+.description {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 400px;
+    margin: auto;
+    padding: 40px;
+    box-sizing: border-box;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.3);
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.input-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+textarea,
+input[type="text"],
+input[type="number"],
+input[type="file"] {
+    flex-grow: 1;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    outline: none;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.img-4 {
+    width: 20px;
+    margin-right: 10px;
+}
+
+.hyperlink-btn {
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    background-color: #2148c0;
+    border-radius: 4px;
+    padding: 15px;
+    cursor: pointer;
+    font-weight: 600;
+    display: inline-block;
+    transition: background-color 0.3s;
+}
+
+.hyperlink-btn:hover {
+    background-color: #183aa5;
+}

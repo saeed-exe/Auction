@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Listing Form</title>
+    <link rel="stylesheet" href="style1.css">
+</head> 
+
+<body>
+    <div class="main-container">
+        <div class="image-wrapper">
+            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/eb682d4b-ca24-4e20-a3b1-f38da5d6a596?apiKey=94a6449fd86a4acd9dd45ac2c2bf0dcf&" class="img" alt="Background Image">
+            <div class="description">
+                <form id="productListingForm">
+                    <div class="input-container">
+                        <div class="input-wrapper">
+                            <input type="text" placeholder="Product Name" id="productName" required>
+                        </div>
+                        <div class="input-wrapper">
+                            <textarea placeholder="Description" id="description" required></textarea>
+                        </div>
+                        <div class="input-wrapper">
+                            <textarea placeholder="Special Features" id="specialFeatures" required></textarea>
+                        </div>
+                        <div class="input-wrap">
+                            <label for="uploadImages" class="img-4">Upload Images</label>
+                            <input type="file" id="uploadImages" accept="image/*" multiple>
+                        </div>
+                        <div class="input-wrapper">
+                            <input type="number" placeholder="Start Bid" id="startBid" required>
+                        </div>
+                        <div class="input-wrapper">
+                            <a href="#" class="hyperlink-btn" onclick="submitForm()">Send for Approval</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function submitForm() {
+            // You can add form submission logic here
+            alert('Form submitted for approval!');
+        }
+    </script>
+</body>
+
+</html>
